@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 import speech_recognition as sr
 
 r = sr.Recognizer()
@@ -13,15 +8,7 @@ with sr.Microphone() as source:
     # convert speech to text
     text = r.recognize_google(audio_data)
     print(type(text))
+    # listen until you heat "hi bot", than listen for X seconds, and print the command given. Wait for ? seconds if a
+    # you identify a break in the speech flow.
     if text == "hi bot":
         print(text)
-
-# def print_hi(name):
-#     # Use a breakpoint in the code line below to debug your script.
-#     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-#
-#
-# # Press the green button in the gutter to run the script.
-# if __name__ == '__main__':
-#     print_hi('PyCharm')
-
